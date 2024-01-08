@@ -69,6 +69,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox1.Image = global::TeacherOrganizer.Properties.Resources.timesheet_40px;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(42, 44);
@@ -103,6 +104,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox2.Image = global::TeacherOrganizer.Properties.Resources.today_40px;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(42, 44);
@@ -116,7 +118,7 @@
             this.dayNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.dayNumber.Location = new System.Drawing.Point(-2, 0);
             this.dayNumber.Name = "dayNumber";
-            this.dayNumber.Size = new System.Drawing.Size(52, 44);
+            this.dayNumber.Size = new System.Drawing.Size(59, 44);
             this.dayNumber.TabIndex = 4;
             this.dayNumber.Text = "01";
             this.dayNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -126,12 +128,14 @@
             this.AddAppointmentButton.BackColor = System.Drawing.Color.Transparent;
             this.AddAppointmentButton.FlatAppearance.BorderSize = 0;
             this.AddAppointmentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddAppointmentButton.Location = new System.Drawing.Point(0, 71);
+            this.AddAppointmentButton.Image = global::TeacherOrganizer.Properties.Resources.calendar_plus_40px;
+            this.AddAppointmentButton.Location = new System.Drawing.Point(0, 39);
             this.AddAppointmentButton.Name = "AddAppointmentButton";
             this.AddAppointmentButton.Size = new System.Drawing.Size(50, 45);
             this.AddAppointmentButton.TabIndex = 5;
             this.AddAppointmentButton.UseVisualStyleBackColor = false;
             this.AddAppointmentButton.Visible = false;
+            this.AddAppointmentButton.Click += new System.EventHandler(this.AddAppointmentButton_Click);
             // 
             // DayBlank
             // 

@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TeacherOrganizer.Calendar;
+using TeacherOrganizer.UserControls;
 
 namespace TeacherOrganizer.Forms
 {
@@ -18,6 +19,8 @@ namespace TeacherOrganizer.Forms
         public static string idTeacher;
         private CustomCalendar _calendar;
         private int _selectedMonth;
+        public delegate void delegateRefreshMethod(int year, int month);
+        public static TaskViewPanel tvp;
 
         private Color ACTIVE_BUTTON_COLOR = Color.FromArgb(255, 107, 107);
         private Color NOT_ACTIVE_COLOR = Color.FromArgb(84, 160, 255);
@@ -35,6 +38,8 @@ namespace TeacherOrganizer.Forms
 
         private void Main_Load(object sender, EventArgs e)
         {
+            delegateRefreshMethod drm = RefreshCalendar;
+            NewTaskForm._delegateRefreshMethod = drm;
             this.FormBorderStyle = FormBorderStyle.Sizable;
             this.WindowState = FormWindowState.Maximized;
             this.FormBorderStyle = FormBorderStyle.None;
@@ -52,13 +57,14 @@ namespace TeacherOrganizer.Forms
             {
                 x.Click += MonthButtonClick;
             }));
+            tvp = taskViewPanel1;
         }
         private void MonthButtonClick(object sender, EventArgs e)
         {
             _selectedMonth = (sender as Button).TabIndex;
             RefreshCalendar(int.Parse(YearButton.Text), _selectedMonth);
         }
-        private void RefreshCalendar(int year, int month)
+        public void RefreshCalendar(int year, int month)
         {
             var date = new DateTime(year, month, 1);
             _calendar.DisplayDays(date);

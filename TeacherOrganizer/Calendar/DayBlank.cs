@@ -5,8 +5,9 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using TeacherOrganizer.Classes;
+using TeacherOrganizer.Forms;
 
 namespace TeacherOrganizer.Calendar
 {
@@ -14,6 +15,7 @@ namespace TeacherOrganizer.Calendar
     {
         private DateTime _currentDate;
         private Color _backColor;
+        private List<Task> _tasks;
         public DayBlank()
         {
             InitializeComponent();
@@ -27,6 +29,17 @@ namespace TeacherOrganizer.Calendar
                 BackColor = Color.FromArgb(222, 255, 159, 67);
 
             dayNumber.ForeColor = foreColor;
+            _tasks = TasksDbFunc.GetTask(date);
+
+            int tasksCount = _tasks.Count;
+            int completedCount = _tasks.Where(x => x.isCompleted).Count();
+            int activeCount = tasksCount - completedCount;
+
+            CompletedAppointmentsLabel.Text = completedCount < 10 ? '0' + completedCount.ToString() : completedCount.ToString();
+            ActiveAppointmentsLabel.Text = activeCount < 10 ? '0' + activeCount.ToString() : activeCount.ToString();
+
+            CompletedAppointmentPanel.Visible = completedCount > 0;
+            ActiveAppointmentPanel.Visible = activeCount > 0;
         }
 
         private void DayBlank_MouseLeave(object sender, EventArgs e)
@@ -46,9 +59,10 @@ namespace TeacherOrganizer.Calendar
 
         private void DayBlankControl_MouseClick(object sender, MouseEventArgs e)
         {
-            // Next tutorial
-            ActiveAppointmentPanel.Visible = true;
-            ActiveAppointmentsLabel.Text = (int.Parse(ActiveAppointmentsLabel.Text) + 1).ToString();
+            if (_tasks.Count > 0)
+            {
+                Main.tvp.FillView(_tasks);
+            }
         }
 
         private void DayBlank_Load_1(object sender, EventArgs e)
@@ -60,6 +74,13 @@ namespace TeacherOrganizer.Calendar
                 x.MouseEnter += DayBlank_MouseEnter;
                 x.MouseLeave += DayBlank_MouseLeave;
             });
+        }
+
+        private void AddAppointmentButton_Click(object sender, EventArgs e)
+        {
+            AddAppointmentButton.Visible = false;
+            BackColor = _backColor;
+            new NewTaskForm(_currentDate, null).ShowDialog();
         }
     }
 }
