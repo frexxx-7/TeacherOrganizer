@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Windows.Input;
+using TeacherOrganizer.Forms;
 
 namespace TeacherOrganizer.Classes
 {
@@ -14,32 +15,32 @@ namespace TeacherOrganizer.Classes
         public static List<Task> GetTask(DateTime date)
         {
             DB db = new DB();
-            MySqlCommand mySqlCommand = new MySqlCommand("SELECT * FROM tasks WHERE endDate = @Date", db.getConnection());
+            MySqlCommand mySqlCommand = new MySqlCommand($"SELECT * FROM tasks WHERE endDate = @Date and idTeacher = {Main.idTeacher}", db.getConnection());
             db.openConnection();
             mySqlCommand.Parameters.AddWithValue("@Date", date.ToString("yyyy-MM-dd"));
-            var appointments = new List<Task>();
+            var tasks = new List<Task>();
             var reader = mySqlCommand.ExecuteReader();
             while (reader.Read())
             {
-                var appointment = new Task();
+                var task = new Task();
 
-                appointment.id = int.Parse(reader["id"].ToString());
-                appointment.title = reader["title"].ToString();
-                appointment.description = reader["description"].ToString();
-                appointment.endDate = Convert.ToDateTime(reader["endDate"].ToString());
-                appointment.isCompleted = Convert.ToBoolean(reader["isComplete"]);
+                task.id = int.Parse(reader["id"].ToString());
+                task.title = reader["title"].ToString();
+                task.description = reader["description"].ToString();
+                task.endDate = Convert.ToDateTime(reader["endDate"].ToString());
+                task.isCompleted = Convert.ToBoolean(reader["isComplete"]);
                 if (reader["idTeacher"].ToString() != "")
-                    appointment.idTeacher = int.Parse(reader["idTeacher"].ToString());
-                appointments.Add(appointment);
+                    task.idTeacher = int.Parse(reader["idTeacher"].ToString());
+                tasks.Add(task);
             }
             db.closeConnection();
-            return appointments;
+            return tasks;
         }
         public static void AddTask(Task task)
         {
             DB db = new DB();
-            MySqlCommand mySqlCommand = new MySqlCommand("INSERT INTO Tasks (title, description, endDate, IsComplete) " +
-                    "VALUES (@title, @description, @endDate, 0)", db.getConnection());
+            MySqlCommand mySqlCommand = new MySqlCommand("INSERT INTO Tasks (title, description, endDate, IsComplete, idTeacher) " +
+                    $"VALUES (@title, @description, @endDate, 0, {Main.idTeacher})", db.getConnection());
             db.openConnection();
             mySqlCommand.Parameters.AddWithValue("@title", task.title);
             mySqlCommand.Parameters.AddWithValue("@description", task.description);

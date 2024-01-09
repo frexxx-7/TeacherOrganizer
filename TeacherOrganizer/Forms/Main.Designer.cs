@@ -33,6 +33,17 @@
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.задачиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.нагрузкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.группыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.планированиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.мероприятияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.планированиеToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.справочникиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.академическийПредметToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.специальностьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.образованиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.codeeloGradientPanel3 = new CodeeloUI.Controls.CodeeloGradientPanel();
             this.taskViewPanel1 = new TeacherOrganizer.UserControls.TaskViewPanel();
@@ -54,16 +65,11 @@
             this.PreviousYearButton = new System.Windows.Forms.Button();
             this.NextYearButton = new System.Windows.Forms.Button();
             this.codeeloGradientPanel2 = new CodeeloUI.Controls.CodeeloGradientPanel();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.задачиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.нагрузкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.группыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.планированиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2Panel1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.codeeloGradientPanel3.SuspendLayout();
             this.MonthNavigationPanel.SuspendLayout();
             this.YearNavigationPanel.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -71,7 +77,6 @@
             this.guna2Panel1.Controls.Add(this.guna2ControlBox1);
             this.guna2Panel1.Controls.Add(this.guna2ControlBox3);
             this.guna2Panel1.Controls.Add(this.guna2ControlBox2);
-            this.guna2Panel1.Controls.Add(this.menuStrip1);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
@@ -84,7 +89,7 @@
             this.guna2ControlBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.Blue;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(905, 9);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(905, 4);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox1.TabIndex = 7;
@@ -97,7 +102,7 @@
             this.guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.guna2ControlBox3.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox3.IconColor = System.Drawing.Color.Blue;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(803, 9);
+            this.guna2ControlBox3.Location = new System.Drawing.Point(803, 4);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
             this.guna2ControlBox3.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox3.TabIndex = 9;
@@ -109,10 +114,101 @@
             this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
             this.guna2ControlBox2.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.Blue;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(854, 9);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(854, 4);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox2.TabIndex = 8;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.задачиToolStripMenuItem,
+            this.нагрузкаToolStripMenuItem,
+            this.группыToolStripMenuItem,
+            this.планированиеToolStripMenuItem,
+            this.справочникиToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 38);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(636, 28);
+            this.menuStrip1.TabIndex = 10;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // задачиToolStripMenuItem
+            // 
+            this.задачиToolStripMenuItem.Name = "задачиToolStripMenuItem";
+            this.задачиToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
+            this.задачиToolStripMenuItem.Text = "Задачи";
+            this.задачиToolStripMenuItem.Click += new System.EventHandler(this.задачиToolStripMenuItem_Click);
+            // 
+            // нагрузкаToolStripMenuItem
+            // 
+            this.нагрузкаToolStripMenuItem.Name = "нагрузкаToolStripMenuItem";
+            this.нагрузкаToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
+            this.нагрузкаToolStripMenuItem.Text = "Нагрузка";
+            this.нагрузкаToolStripMenuItem.Click += new System.EventHandler(this.нагрузкаToolStripMenuItem_Click);
+            // 
+            // группыToolStripMenuItem
+            // 
+            this.группыToolStripMenuItem.Name = "группыToolStripMenuItem";
+            this.группыToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
+            this.группыToolStripMenuItem.Text = "Группы";
+            this.группыToolStripMenuItem.Click += new System.EventHandler(this.группыToolStripMenuItem_Click);
+            // 
+            // планированиеToolStripMenuItem
+            // 
+            this.планированиеToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.мероприятияToolStripMenuItem,
+            this.планированиеToolStripMenuItem1});
+            this.планированиеToolStripMenuItem.Name = "планированиеToolStripMenuItem";
+            this.планированиеToolStripMenuItem.Size = new System.Drawing.Size(128, 24);
+            this.планированиеToolStripMenuItem.Text = "Планирование";
+            // 
+            // мероприятияToolStripMenuItem
+            // 
+            this.мероприятияToolStripMenuItem.Name = "мероприятияToolStripMenuItem";
+            this.мероприятияToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.мероприятияToolStripMenuItem.Text = "Мероприятия";
+            this.мероприятияToolStripMenuItem.Click += new System.EventHandler(this.мероприятияToolStripMenuItem_Click);
+            // 
+            // планированиеToolStripMenuItem1
+            // 
+            this.планированиеToolStripMenuItem1.Name = "планированиеToolStripMenuItem1";
+            this.планированиеToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.планированиеToolStripMenuItem1.Text = "Планирование";
+            this.планированиеToolStripMenuItem1.Click += new System.EventHandler(this.планированиеToolStripMenuItem1_Click);
+            // 
+            // справочникиToolStripMenuItem
+            // 
+            this.справочникиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.академическийПредметToolStripMenuItem,
+            this.специальностьToolStripMenuItem,
+            this.образованиеToolStripMenuItem});
+            this.справочникиToolStripMenuItem.Name = "справочникиToolStripMenuItem";
+            this.справочникиToolStripMenuItem.Size = new System.Drawing.Size(117, 24);
+            this.справочникиToolStripMenuItem.Text = "Справочники";
+            // 
+            // академическийПредметToolStripMenuItem
+            // 
+            this.академическийПредметToolStripMenuItem.Name = "академическийПредметToolStripMenuItem";
+            this.академическийПредметToolStripMenuItem.Size = new System.Drawing.Size(264, 26);
+            this.академическийПредметToolStripMenuItem.Text = "Академический предмет";
+            this.академическийПредметToolStripMenuItem.Click += new System.EventHandler(this.академическийПредметToolStripMenuItem_Click);
+            // 
+            // специальностьToolStripMenuItem
+            // 
+            this.специальностьToolStripMenuItem.Name = "специальностьToolStripMenuItem";
+            this.специальностьToolStripMenuItem.Size = new System.Drawing.Size(264, 26);
+            this.специальностьToolStripMenuItem.Text = "Специальность";
+            this.специальностьToolStripMenuItem.Click += new System.EventHandler(this.специальностьToolStripMenuItem_Click);
+            // 
+            // образованиеToolStripMenuItem
+            // 
+            this.образованиеToolStripMenuItem.Name = "образованиеToolStripMenuItem";
+            this.образованиеToolStripMenuItem.Size = new System.Drawing.Size(264, 26);
+            this.образованиеToolStripMenuItem.Text = "Образование";
+            this.образованиеToolStripMenuItem.Click += new System.EventHandler(this.образованиеToolStripMenuItem_Click);
             // 
             // guna2DragControl1
             // 
@@ -408,56 +504,19 @@
             // codeeloGradientPanel2
             // 
             this.codeeloGradientPanel2.AccessibleRole = null;
+            this.codeeloGradientPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.codeeloGradientPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.codeeloGradientPanel2.CausesValidation = false;
             this.codeeloGradientPanel2.ColorFillFirst = System.Drawing.Color.White;
             this.codeeloGradientPanel2.ColorFillSecond = System.Drawing.Color.Blue;
-            this.codeeloGradientPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.codeeloGradientPanel2.DrawGradient = true;
             this.codeeloGradientPanel2.GradientDirection = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.codeeloGradientPanel2.Location = new System.Drawing.Point(0, 38);
+            this.codeeloGradientPanel2.Location = new System.Drawing.Point(0, 69);
             this.codeeloGradientPanel2.Name = "codeeloGradientPanel2";
-            this.codeeloGradientPanel2.Size = new System.Drawing.Size(573, 597);
+            this.codeeloGradientPanel2.Size = new System.Drawing.Size(573, 566);
             this.codeeloGradientPanel2.TabIndex = 26;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.задачиToolStripMenuItem,
-            this.нагрузкаToolStripMenuItem,
-            this.группыToolStripMenuItem,
-            this.планированиеToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(958, 28);
-            this.menuStrip1.TabIndex = 10;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // задачиToolStripMenuItem
-            // 
-            this.задачиToolStripMenuItem.Name = "задачиToolStripMenuItem";
-            this.задачиToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
-            this.задачиToolStripMenuItem.Text = "Задачи";
-            this.задачиToolStripMenuItem.Click += new System.EventHandler(this.задачиToolStripMenuItem_Click);
-            // 
-            // нагрузкаToolStripMenuItem
-            // 
-            this.нагрузкаToolStripMenuItem.Name = "нагрузкаToolStripMenuItem";
-            this.нагрузкаToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
-            this.нагрузкаToolStripMenuItem.Text = "Нагрузка";
-            // 
-            // группыToolStripMenuItem
-            // 
-            this.группыToolStripMenuItem.Name = "группыToolStripMenuItem";
-            this.группыToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
-            this.группыToolStripMenuItem.Text = "Группы";
-            // 
-            // планированиеToolStripMenuItem
-            // 
-            this.планированиеToolStripMenuItem.Name = "планированиеToolStripMenuItem";
-            this.планированиеToolStripMenuItem.Size = new System.Drawing.Size(128, 24);
-            this.планированиеToolStripMenuItem.Text = "Планирование";
             // 
             // Main
             // 
@@ -465,6 +524,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(958, 635);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.codeeloGradientPanel2);
             this.Controls.Add(this.codeeloGradientPanel3);
             this.Controls.Add(this.guna2Panel1);
@@ -475,13 +535,13 @@
             this.Text = "Main";
             this.Load += new System.EventHandler(this.Main_Load);
             this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.codeeloGradientPanel3.ResumeLayout(false);
             this.MonthNavigationPanel.ResumeLayout(false);
             this.YearNavigationPanel.ResumeLayout(false);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -517,5 +577,11 @@
         private System.Windows.Forms.ToolStripMenuItem нагрузкаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem группыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem планированиеToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem справочникиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem академическийПредметToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem специальностьToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem образованиеToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem мероприятияToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem планированиеToolStripMenuItem1;
     }
 }

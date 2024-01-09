@@ -63,6 +63,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddForms\AddAcademicSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddForms\AddAcademicSubject.Designer.cs">
+      <DependentUpon>AddAcademicSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddForms\AddBurder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddForms\AddBurder.Designer.cs">
+      <DependentUpon>AddBurder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddForms\AddEducation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddForms\AddEducation.Designer.cs">
+      <DependentUpon>AddEducation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddForms\AddEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddForms\AddEvent.Designer.cs">
+      <DependentUpon>AddEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddForms\AddPlanning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddForms\AddPlanning.Designer.cs">
+      <DependentUpon>AddPlanning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddForms\AddSpeciality.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddForms\AddSpeciality.Designer.cs">
+      <DependentUpon>AddSpeciality.cs</DependentUpon>
+    </Compile>
     <Compile Include="Calendar\CustomCalendar.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -79,11 +115,41 @@
     <Compile Include="Classes\DB.cs" />
     <Compile Include="Classes\Task.cs" />
     <Compile Include="Classes\TasksDbFunc.cs" />
+    <Compile Include="Forms\AcademicSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AcademicSubject.Designer.cs">
+      <DependentUpon>AcademicSubject.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Autorization.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Autorization.Designer.cs">
       <DependentUpon>Autorization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddForms\AddGroups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddForms\AddGroups.Designer.cs">
+      <DependentUpon>AddGroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Education.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Education.Designer.cs">
+      <DependentUpon>Education.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Events.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Events.Designer.cs">
+      <DependentUpon>Events.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Groups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Groups.Designer.cs">
+      <DependentUpon>Groups.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Main.cs">
       <SubType>Form</SubType>
@@ -97,6 +163,12 @@
     <Compile Include="Forms\NewTaskForm.Designer.cs">
       <DependentUpon>NewTaskForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Planning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Planning.Designer.cs">
+      <DependentUpon>Planning.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Registration.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +180,19 @@
     </Compile>
     <Compile Include="Forms\ShowTask.Designer.cs">
       <DependentUpon>ShowTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Burder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\.Designer.cs">
+      <DependentUpon>Burder.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Speciality.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Speciality.Designer.cs">
+      <DependentUpon>Speciality.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\TasksForm.cs">
       <SubType>Form</SubType>
@@ -129,14 +214,47 @@
     <Compile Include="UserControls\TaskViewPanel.Designer.cs">
       <DependentUpon>TaskViewPanel.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddForms\AddAcademicSubject.resx">
+      <DependentUpon>AddAcademicSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddForms\AddBurder.resx">
+      <DependentUpon>AddBurder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddForms\AddEducation.resx">
+      <DependentUpon>AddEducation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddForms\AddEvent.resx">
+      <DependentUpon>AddEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddForms\AddPlanning.resx">
+      <DependentUpon>AddPlanning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddForms\AddSpeciality.resx">
+      <DependentUpon>AddSpeciality.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Calendar\CustomCalendar.resx">
       <DependentUpon>CustomCalendar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Calendar\DayBlank.resx">
       <DependentUpon>DayBlank.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AcademicSubject.resx">
+      <DependentUpon>AcademicSubject.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Autorization.resx">
       <DependentUpon>Autorization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddForms\AddGroups.resx">
+      <DependentUpon>AddGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Education.resx">
+      <DependentUpon>Education.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Events.resx">
+      <DependentUpon>Events.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Groups.resx">
+      <DependentUpon>Groups.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -144,11 +262,20 @@
     <EmbeddedResource Include="Forms\NewTaskForm.resx">
       <DependentUpon>NewTaskForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Planning.resx">
+      <DependentUpon>Planning.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ShowTask.resx">
       <DependentUpon>ShowTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Burder.resx">
+      <DependentUpon>Burder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Speciality.resx">
+      <DependentUpon>Speciality.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TasksForm.resx">
       <DependentUpon>TasksForm.cs</DependentUpon>
@@ -192,8 +319,6 @@
   <ItemGroup>
     <None Include="Resources\timesheet_40px1.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="AddForms\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

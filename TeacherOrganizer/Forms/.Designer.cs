@@ -1,6 +1,6 @@
 ﻿namespace TeacherOrganizer.Forms
 {
-    partial class TasksForm
+    partial class Burder
     {
         /// <summary>
         /// Required designer variable.
@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -42,18 +42,17 @@
             this.EditButton = new Guna.UI2.WinForms.Guna2Button();
             this.AddButton = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.tasksDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.idColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TitleColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DescriptionColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EndDateColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IsCopleteColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.burderDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label1 = new System.Windows.Forms.Label();
+            this.idColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GroupColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CountHourColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AcademicSubject = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2Panel1.SuspendLayout();
             this.manipulationPanel.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tasksDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.burderDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -188,7 +187,7 @@
             // 
             // guna2Panel2
             // 
-            this.guna2Panel2.Controls.Add(this.tasksDataGridView);
+            this.guna2Panel2.Controls.Add(this.burderDataGridView);
             this.guna2Panel2.Controls.Add(this.label1);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2Panel2.Location = new System.Drawing.Point(0, 44);
@@ -196,66 +195,77 @@
             this.guna2Panel2.Size = new System.Drawing.Size(763, 543);
             this.guna2Panel2.TabIndex = 26;
             // 
-            // tasksDataGridView
+            // burderDataGridView
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.tasksDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.tasksDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.burderDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.burderDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tasksDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.tasksDataGridView.ColumnHeadersHeight = 18;
-            this.tasksDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.tasksDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.burderDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.burderDataGridView.ColumnHeadersHeight = 18;
+            this.burderDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.burderDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idColumn,
-            this.TitleColumn,
-            this.DescriptionColumn,
-            this.EndDateColumn,
-            this.IsCopleteColumn});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tasksDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
-            this.tasksDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.tasksDataGridView.Location = new System.Drawing.Point(26, 62);
-            this.tasksDataGridView.Name = "tasksDataGridView";
-            this.tasksDataGridView.RowHeadersVisible = false;
-            this.tasksDataGridView.RowHeadersWidth = 51;
-            this.tasksDataGridView.RowTemplate.Height = 24;
-            this.tasksDataGridView.Size = new System.Drawing.Size(722, 439);
-            this.tasksDataGridView.TabIndex = 29;
-            this.tasksDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.tasksDataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.tasksDataGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.tasksDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.tasksDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.tasksDataGridView.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.tasksDataGridView.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.tasksDataGridView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.tasksDataGridView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.tasksDataGridView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tasksDataGridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.tasksDataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.tasksDataGridView.ThemeStyle.HeaderStyle.Height = 18;
-            this.tasksDataGridView.ThemeStyle.ReadOnly = false;
-            this.tasksDataGridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.tasksDataGridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.tasksDataGridView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.tasksDataGridView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.tasksDataGridView.ThemeStyle.RowsStyle.Height = 24;
-            this.tasksDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.tasksDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.GroupColumn,
+            this.CountHourColumn,
+            this.AcademicSubject});
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.burderDataGridView.DefaultCellStyle = dataGridViewCellStyle12;
+            this.burderDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.burderDataGridView.Location = new System.Drawing.Point(26, 62);
+            this.burderDataGridView.Name = "burderDataGridView";
+            this.burderDataGridView.RowHeadersVisible = false;
+            this.burderDataGridView.RowHeadersWidth = 51;
+            this.burderDataGridView.RowTemplate.Height = 24;
+            this.burderDataGridView.Size = new System.Drawing.Size(722, 439);
+            this.burderDataGridView.TabIndex = 29;
+            this.burderDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.burderDataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.burderDataGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.burderDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.burderDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.burderDataGridView.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.burderDataGridView.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.burderDataGridView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.burderDataGridView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.burderDataGridView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.burderDataGridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.burderDataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.burderDataGridView.ThemeStyle.HeaderStyle.Height = 18;
+            this.burderDataGridView.ThemeStyle.ReadOnly = false;
+            this.burderDataGridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.burderDataGridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.burderDataGridView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.burderDataGridView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.burderDataGridView.ThemeStyle.RowsStyle.Height = 24;
+            this.burderDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.burderDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(255)))));
+            this.label1.Location = new System.Drawing.Point(353, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(130, 29);
+            this.label1.TabIndex = 28;
+            this.label1.Text = "Нагрузка";
             // 
             // idColumn
             // 
@@ -264,41 +274,23 @@
             this.idColumn.Name = "idColumn";
             this.idColumn.Visible = false;
             // 
-            // TitleColumn
+            // GroupColumn
             // 
-            this.TitleColumn.HeaderText = "Заголовок";
-            this.TitleColumn.MinimumWidth = 6;
-            this.TitleColumn.Name = "TitleColumn";
+            this.GroupColumn.HeaderText = "Группа";
+            this.GroupColumn.MinimumWidth = 6;
+            this.GroupColumn.Name = "GroupColumn";
             // 
-            // DescriptionColumn
+            // CountHourColumn
             // 
-            this.DescriptionColumn.HeaderText = "Описание";
-            this.DescriptionColumn.MinimumWidth = 6;
-            this.DescriptionColumn.Name = "DescriptionColumn";
+            this.CountHourColumn.HeaderText = "Количество часов";
+            this.CountHourColumn.MinimumWidth = 6;
+            this.CountHourColumn.Name = "CountHourColumn";
             // 
-            // EndDateColumn
+            // AcademicSubject
             // 
-            this.EndDateColumn.HeaderText = "Дата окончания";
-            this.EndDateColumn.MinimumWidth = 6;
-            this.EndDateColumn.Name = "EndDateColumn";
-            // 
-            // IsCopleteColumn
-            // 
-            this.IsCopleteColumn.HeaderText = "Выполнено";
-            this.IsCopleteColumn.MinimumWidth = 6;
-            this.IsCopleteColumn.Name = "IsCopleteColumn";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(74)))), ((int)(((byte)(255)))));
-            this.label1.Location = new System.Drawing.Point(352, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 29);
-            this.label1.TabIndex = 28;
-            this.label1.Text = "Задачи";
+            this.AcademicSubject.HeaderText = "Академический предмет";
+            this.AcademicSubject.MinimumWidth = 6;
+            this.AcademicSubject.Name = "AcademicSubject";
             // 
             // guna2DragControl1
             // 
@@ -306,7 +298,7 @@
             this.guna2DragControl1.TargetControl = this.guna2Panel1;
             this.guna2DragControl1.UseTransparentDrag = true;
             // 
-            // TasksForm
+            // Burder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -316,7 +308,7 @@
             this.Controls.Add(this.manipulationPanel);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "TasksForm";
+            this.Name = "Burder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TasksForm";
             this.Load += new System.EventHandler(this.TasksForm_Load);
@@ -324,7 +316,7 @@
             this.manipulationPanel.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tasksDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.burderDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -339,15 +331,14 @@
         private Guna.UI2.WinForms.Guna2Button AddButton;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Button EditButton;
-        private Guna.UI2.WinForms.Guna2DataGridView tasksDataGridView;
+        private Guna.UI2.WinForms.Guna2DataGridView burderDataGridView;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button UpdateButton;
         private Guna.UI2.WinForms.Guna2Button DeleteButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn idColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TitleColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DescriptionColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EndDateColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IsCopleteColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GroupColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CountHourColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AcademicSubject;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }

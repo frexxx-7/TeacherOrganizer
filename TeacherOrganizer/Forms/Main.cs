@@ -129,7 +129,42 @@ namespace TeacherOrganizer.Forms
 
         private void задачиToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new TasksForm().Show();
+            new TasksForm().ShowDialog();
+        }
+
+        private void нагрузкаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Burder().ShowDialog();
+        }
+
+        private void группыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Groups().ShowDialog();
+        }
+
+        private void академическийПредметToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new AcademicSubject().ShowDialog();
+        }
+
+        private void специальностьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Speciality().ShowDialog();
+        }
+
+        private void образованиеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Education().ShowDialog();
+        }
+
+        private void мероприятияToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Events().ShowDialog();
+        }
+
+        private void планированиеToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            new Planning().ShowDialog();
         }
     }
 }
