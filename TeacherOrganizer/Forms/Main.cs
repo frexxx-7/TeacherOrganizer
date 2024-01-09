@@ -38,6 +38,7 @@ namespace TeacherOrganizer.Forms
 
         private void Main_Load(object sender, EventArgs e)
         {
+            tvp = taskViewPanel1;
             delegateRefreshMethod drm = RefreshCalendar;
             NewTaskForm._delegateRefreshMethod = drm;
             this.FormBorderStyle = FormBorderStyle.Sizable;
@@ -57,7 +58,6 @@ namespace TeacherOrganizer.Forms
             {
                 x.Click += MonthButtonClick;
             }));
-            tvp = taskViewPanel1;
         }
         private void MonthButtonClick(object sender, EventArgs e)
         {
@@ -125,6 +125,11 @@ namespace TeacherOrganizer.Forms
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void задачиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new TasksForm().Show();
         }
     }
 }

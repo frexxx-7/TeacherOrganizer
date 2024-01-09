@@ -35,6 +35,7 @@
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.codeeloGradientPanel3 = new CodeeloUI.Controls.CodeeloGradientPanel();
+            this.taskViewPanel1 = new TeacherOrganizer.UserControls.TaskViewPanel();
             this.MonthNavigationPanel = new System.Windows.Forms.Panel();
             this.DecemberButton = new System.Windows.Forms.Button();
             this.NovemberButton = new System.Windows.Forms.Button();
@@ -53,11 +54,16 @@
             this.PreviousYearButton = new System.Windows.Forms.Button();
             this.NextYearButton = new System.Windows.Forms.Button();
             this.codeeloGradientPanel2 = new CodeeloUI.Controls.CodeeloGradientPanel();
-            this.taskViewPanel1 = new TeacherOrganizer.UserControls.TaskViewPanel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.задачиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.нагрузкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.группыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.планированиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2Panel1.SuspendLayout();
             this.codeeloGradientPanel3.SuspendLayout();
             this.MonthNavigationPanel.SuspendLayout();
             this.YearNavigationPanel.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -65,10 +71,11 @@
             this.guna2Panel1.Controls.Add(this.guna2ControlBox1);
             this.guna2Panel1.Controls.Add(this.guna2ControlBox3);
             this.guna2Panel1.Controls.Add(this.guna2ControlBox2);
+            this.guna2Panel1.Controls.Add(this.menuStrip1);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(958, 44);
+            this.guna2Panel1.Size = new System.Drawing.Size(958, 38);
             this.guna2Panel1.TabIndex = 24;
             // 
             // guna2ControlBox1
@@ -126,10 +133,18 @@
             this.codeeloGradientPanel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.codeeloGradientPanel3.DrawGradient = true;
             this.codeeloGradientPanel3.GradientDirection = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.codeeloGradientPanel3.Location = new System.Drawing.Point(567, 44);
+            this.codeeloGradientPanel3.Location = new System.Drawing.Point(573, 38);
             this.codeeloGradientPanel3.Name = "codeeloGradientPanel3";
-            this.codeeloGradientPanel3.Size = new System.Drawing.Size(391, 591);
+            this.codeeloGradientPanel3.Size = new System.Drawing.Size(385, 597);
             this.codeeloGradientPanel3.TabIndex = 25;
+            // 
+            // taskViewPanel1
+            // 
+            this.taskViewPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.taskViewPanel1.Location = new System.Drawing.Point(0, 72);
+            this.taskViewPanel1.Name = "taskViewPanel1";
+            this.taskViewPanel1.Size = new System.Drawing.Size(187, 525);
+            this.taskViewPanel1.TabIndex = 2;
             // 
             // MonthNavigationPanel
             // 
@@ -146,9 +161,9 @@
             this.MonthNavigationPanel.Controls.Add(this.FebruaryButton);
             this.MonthNavigationPanel.Controls.Add(this.JanuaryButton);
             this.MonthNavigationPanel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.MonthNavigationPanel.Location = new System.Drawing.Point(193, 72);
+            this.MonthNavigationPanel.Location = new System.Drawing.Point(187, 72);
             this.MonthNavigationPanel.Name = "MonthNavigationPanel";
-            this.MonthNavigationPanel.Size = new System.Drawing.Size(198, 519);
+            this.MonthNavigationPanel.Size = new System.Drawing.Size(198, 525);
             this.MonthNavigationPanel.TabIndex = 1;
             // 
             // DecemberButton
@@ -340,7 +355,7 @@
             this.YearNavigationPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.YearNavigationPanel.Location = new System.Drawing.Point(0, 0);
             this.YearNavigationPanel.Name = "YearNavigationPanel";
-            this.YearNavigationPanel.Size = new System.Drawing.Size(391, 72);
+            this.YearNavigationPanel.Size = new System.Drawing.Size(385, 72);
             this.YearNavigationPanel.TabIndex = 0;
             // 
             // YearButton
@@ -353,7 +368,7 @@
             this.YearButton.ForeColor = System.Drawing.Color.Blue;
             this.YearButton.Location = new System.Drawing.Point(75, 0);
             this.YearButton.Name = "YearButton";
-            this.YearButton.Size = new System.Drawing.Size(241, 72);
+            this.YearButton.Size = new System.Drawing.Size(235, 72);
             this.YearButton.TabIndex = 2;
             this.YearButton.Text = "ГОД";
             this.YearButton.UseVisualStyleBackColor = false;
@@ -382,7 +397,7 @@
             this.NextYearButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NextYearButton.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.NextYearButton.ForeColor = System.Drawing.Color.Blue;
-            this.NextYearButton.Location = new System.Drawing.Point(316, 0);
+            this.NextYearButton.Location = new System.Drawing.Point(310, 0);
             this.NextYearButton.Name = "NextYearButton";
             this.NextYearButton.Size = new System.Drawing.Size(75, 72);
             this.NextYearButton.TabIndex = 0;
@@ -400,18 +415,49 @@
             this.codeeloGradientPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.codeeloGradientPanel2.DrawGradient = true;
             this.codeeloGradientPanel2.GradientDirection = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.codeeloGradientPanel2.Location = new System.Drawing.Point(0, 44);
+            this.codeeloGradientPanel2.Location = new System.Drawing.Point(0, 38);
             this.codeeloGradientPanel2.Name = "codeeloGradientPanel2";
-            this.codeeloGradientPanel2.Size = new System.Drawing.Size(567, 591);
+            this.codeeloGradientPanel2.Size = new System.Drawing.Size(573, 597);
             this.codeeloGradientPanel2.TabIndex = 26;
             // 
-            // taskViewPanel1
+            // menuStrip1
             // 
-            this.taskViewPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.taskViewPanel1.Location = new System.Drawing.Point(0, 72);
-            this.taskViewPanel1.Name = "taskViewPanel1";
-            this.taskViewPanel1.Size = new System.Drawing.Size(193, 519);
-            this.taskViewPanel1.TabIndex = 2;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.задачиToolStripMenuItem,
+            this.нагрузкаToolStripMenuItem,
+            this.группыToolStripMenuItem,
+            this.планированиеToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(958, 28);
+            this.menuStrip1.TabIndex = 10;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // задачиToolStripMenuItem
+            // 
+            this.задачиToolStripMenuItem.Name = "задачиToolStripMenuItem";
+            this.задачиToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
+            this.задачиToolStripMenuItem.Text = "Задачи";
+            this.задачиToolStripMenuItem.Click += new System.EventHandler(this.задачиToolStripMenuItem_Click);
+            // 
+            // нагрузкаToolStripMenuItem
+            // 
+            this.нагрузкаToolStripMenuItem.Name = "нагрузкаToolStripMenuItem";
+            this.нагрузкаToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
+            this.нагрузкаToolStripMenuItem.Text = "Нагрузка";
+            // 
+            // группыToolStripMenuItem
+            // 
+            this.группыToolStripMenuItem.Name = "группыToolStripMenuItem";
+            this.группыToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
+            this.группыToolStripMenuItem.Text = "Группы";
+            // 
+            // планированиеToolStripMenuItem
+            // 
+            this.планированиеToolStripMenuItem.Name = "планированиеToolStripMenuItem";
+            this.планированиеToolStripMenuItem.Size = new System.Drawing.Size(128, 24);
+            this.планированиеToolStripMenuItem.Text = "Планирование";
             // 
             // Main
             // 
@@ -423,14 +469,18 @@
             this.Controls.Add(this.codeeloGradientPanel3);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
             this.Load += new System.EventHandler(this.Main_Load);
             this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             this.codeeloGradientPanel3.ResumeLayout(false);
             this.MonthNavigationPanel.ResumeLayout(false);
             this.YearNavigationPanel.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -462,5 +512,10 @@
         private System.Windows.Forms.Button NextYearButton;
         private CodeeloUI.Controls.CodeeloGradientPanel codeeloGradientPanel2;
         private UserControls.TaskViewPanel taskViewPanel1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem задачиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem нагрузкаToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem группыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem планированиеToolStripMenuItem;
     }
 }

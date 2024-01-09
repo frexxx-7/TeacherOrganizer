@@ -25,11 +25,18 @@ namespace TeacherOrganizer.Calendar
             BackColor = _backColor = backColor;
             dayNumber.Text = day.ToString();
             _currentDate = date;
+            _tasks = TasksDbFunc.GetTask(date);
+
             if (_currentDate.ToShortDateString() == DateTime.Now.ToShortDateString())
+            {
                 BackColor = Color.FromArgb(222, 255, 159, 67);
+                if (_tasks.Count > 0)
+                {
+                    Main.tvp.FillView(_tasks);
+                }
+            }
 
             dayNumber.ForeColor = foreColor;
-            _tasks = TasksDbFunc.GetTask(date);
 
             int tasksCount = _tasks.Count;
             int completedCount = _tasks.Where(x => x.isCompleted).Count();

@@ -55,7 +55,7 @@ namespace TeacherOrganizer.Classes
             if (task.isCompleted)
             {
                 mySqlCommand = new MySqlCommand("UPDATE Tasks SET title = @title, description = @description, " +
-                    "endDate = @endDate, IsCompleted = 1 WHERE id = @id", db.getConnection());
+                    "endDate = @endDate, IsComplete = 1 WHERE id = @id", db.getConnection());
             }
             else
             {

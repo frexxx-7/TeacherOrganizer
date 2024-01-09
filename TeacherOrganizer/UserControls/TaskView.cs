@@ -60,7 +60,7 @@ namespace TeacherOrganizer.UserControls
             if (_task.isCompleted)
             {
                 TitleLabel.ForeColor = Color.MediumSpringGreen;
-                TitleLabel.Text = "Выполнено:" + Environment.NewLine + TitleLabel.Text;
+                TitleLabel.Text = TitleLabel.Text;
             }
 
             var titleHeight = TextRenderer.MeasureText(title, Font, new Size(300, 40), TextFormatFlags.WordBreak).Height;
@@ -71,6 +71,37 @@ namespace TeacherOrganizer.UserControls
             titleHeight = titleHeight > 100 ? titleHeight + 25 : titleHeight;
 
             Height = titleHeight + descriprionHeight;
+        }
+
+        private void DescriptionLabel_MouseMove(object sender, MouseEventArgs e)
+        {
+            TitleLabel.ForeColor = Color.Fuchsia;
+        }
+
+        private void DescriptionLabel_MouseLeave(object sender, EventArgs e)
+        {
+            TitleLabel.ForeColor = Color.Blue;
+        }
+
+        private void TitleLabel_MouseMove(object sender, MouseEventArgs e)
+        {
+            TitleLabel.ForeColor = Color.Fuchsia;
+
+        }
+
+        private void TitleLabel_MouseLeave(object sender, EventArgs e)
+        {
+            TitleLabel.ForeColor = Color.Blue;
+        }
+
+        private void TitleLabel_Click(object sender, EventArgs e)
+        {
+            new ShowTask(_task).Show();
+        }
+
+        private void DescriptionLabel_Click(object sender, EventArgs e)
+        {
+            new ShowTask(_task).Show();
         }
     }
 }
