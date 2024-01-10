@@ -21,6 +21,7 @@ namespace TeacherOrganizer.Forms
         private int _selectedMonth;
         public delegate void delegateRefreshMethod(int year, int month);
         public static TaskViewPanel tvp;
+        public static Main mainForm;
 
         private Color ACTIVE_BUTTON_COLOR = Color.FromArgb(255, 107, 107);
         private Color NOT_ACTIVE_COLOR = Color.FromArgb(84, 160, 255);
@@ -39,6 +40,7 @@ namespace TeacherOrganizer.Forms
         private void Main_Load(object sender, EventArgs e)
         {
             tvp = taskViewPanel1;
+            Main.mainForm = this; 
             delegateRefreshMethod drm = RefreshCalendar;
             NewTaskForm._delegateRefreshMethod = drm;
             this.FormBorderStyle = FormBorderStyle.Sizable;
@@ -165,6 +167,16 @@ namespace TeacherOrganizer.Forms
         private void планированиеToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             new Planning().ShowDialog();
+        }
+
+        private void профильToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Profile().ShowDialog();
+        }
+
+        private void отчетToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Report().ShowDialog();
         }
     }
 }

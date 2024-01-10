@@ -44,9 +44,9 @@ namespace TeacherOrganizer.AddForms
                 }
                 for (int i = 0; i < academicSubjectComboBox.Items.Count; i++)
                 {
-                    if (reader["idGroup"].ToString() != "")
+                    if (reader["idAcademicSubject"].ToString() != "")
                     {
-                        if (Convert.ToInt32((academicSubjectComboBox.Items[i] as ComboBoxItem).Value) == Convert.ToInt32(reader["idGroup"]))
+                        if (Convert.ToInt32((academicSubjectComboBox.Items[i] as ComboBoxItem).Value) == Convert.ToInt32(reader["idAcademicSubject"]))
                         {
                             academicSubjectComboBox.SelectedIndex = i;
                         }

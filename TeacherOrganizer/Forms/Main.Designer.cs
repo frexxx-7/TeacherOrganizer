@@ -44,6 +44,9 @@
             this.академическийПредметToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.специальностьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.образованиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.настройкиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.профильToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.отчетToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.codeeloGradientPanel3 = new CodeeloUI.Controls.CodeeloGradientPanel();
             this.taskViewPanel1 = new TeacherOrganizer.UserControls.TaskViewPanel();
@@ -128,10 +131,11 @@
             this.нагрузкаToolStripMenuItem,
             this.группыToolStripMenuItem,
             this.планированиеToolStripMenuItem,
-            this.справочникиToolStripMenuItem});
+            this.справочникиToolStripMenuItem,
+            this.настройкиToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 38);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(636, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(734, 28);
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -168,14 +172,14 @@
             // мероприятияToolStripMenuItem
             // 
             this.мероприятияToolStripMenuItem.Name = "мероприятияToolStripMenuItem";
-            this.мероприятияToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.мероприятияToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
             this.мероприятияToolStripMenuItem.Text = "Мероприятия";
             this.мероприятияToolStripMenuItem.Click += new System.EventHandler(this.мероприятияToolStripMenuItem_Click);
             // 
             // планированиеToolStripMenuItem1
             // 
             this.планированиеToolStripMenuItem1.Name = "планированиеToolStripMenuItem1";
-            this.планированиеToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.планированиеToolStripMenuItem1.Size = new System.Drawing.Size(197, 26);
             this.планированиеToolStripMenuItem1.Text = "Планирование";
             this.планированиеToolStripMenuItem1.Click += new System.EventHandler(this.планированиеToolStripMenuItem1_Click);
             // 
@@ -209,6 +213,29 @@
             this.образованиеToolStripMenuItem.Size = new System.Drawing.Size(264, 26);
             this.образованиеToolStripMenuItem.Text = "Образование";
             this.образованиеToolStripMenuItem.Click += new System.EventHandler(this.образованиеToolStripMenuItem_Click);
+            // 
+            // настройкиToolStripMenuItem
+            // 
+            this.настройкиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.профильToolStripMenuItem,
+            this.отчетToolStripMenuItem});
+            this.настройкиToolStripMenuItem.Name = "настройкиToolStripMenuItem";
+            this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(98, 24);
+            this.настройкиToolStripMenuItem.Text = "Настройки";
+            // 
+            // профильToolStripMenuItem
+            // 
+            this.профильToolStripMenuItem.Name = "профильToolStripMenuItem";
+            this.профильToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.профильToolStripMenuItem.Text = "Профиль";
+            this.профильToolStripMenuItem.Click += new System.EventHandler(this.профильToolStripMenuItem_Click);
+            // 
+            // отчетToolStripMenuItem
+            // 
+            this.отчетToolStripMenuItem.Name = "отчетToolStripMenuItem";
+            this.отчетToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.отчетToolStripMenuItem.Text = "Отчет";
+            this.отчетToolStripMenuItem.Click += new System.EventHandler(this.отчетToolStripMenuItem_Click);
             // 
             // guna2DragControl1
             // 
@@ -583,5 +610,8 @@
         private System.Windows.Forms.ToolStripMenuItem образованиеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem мероприятияToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem планированиеToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem настройкиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem профильToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem отчетToolStripMenuItem;
     }
 }
