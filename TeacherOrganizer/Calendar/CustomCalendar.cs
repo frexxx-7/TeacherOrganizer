@@ -72,5 +72,14 @@ namespace TeacherOrganizer.Calendar
                     Color.LightGray);
             }
         }
+
+        private void CustomCalendar_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void CustomCalendar_Paint(object sender, PaintEventArgs e)
+        {
+        }
     }
 }

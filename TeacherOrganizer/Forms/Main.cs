@@ -1,4 +1,5 @@
 ﻿using CodeeloUI.Controls;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -6,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TeacherOrganizer.Calendar;
@@ -22,6 +24,7 @@ namespace TeacherOrganizer.Forms
         public delegate void delegateRefreshMethod(int year, int month);
         public static TaskViewPanel tvp;
         public static Main mainForm;
+        public static Guna2PictureBox loader;
 
         private Color ACTIVE_BUTTON_COLOR = Color.FromArgb(255, 107, 107);
         private Color NOT_ACTIVE_COLOR = Color.FromArgb(84, 160, 255);
@@ -39,6 +42,7 @@ namespace TeacherOrganizer.Forms
 
         private void Main_Load(object sender, EventArgs e)
         {
+            loader = guna2PictureBox1;
             tvp = taskViewPanel1;
             Main.mainForm = this; 
             delegateRefreshMethod drm = RefreshCalendar;
@@ -49,8 +53,10 @@ namespace TeacherOrganizer.Forms
             _calendar = new CustomCalendar();
             _calendar.Dock = DockStyle.Fill;
             _calendar.DisplayDays(DateTime.Now);
-
+            guna2PictureBox1.BringToFront();
             codeeloGradientPanel2.Controls.Add(_calendar);
+
+
             YearButton.Text = DateTime.Now.Year.ToString();
             _selectedMonth = DateTime.Now.Month;
             ChooseActiveButton(_selectedMonth).BackColor = ACTIVE_BUTTON_COLOR;
@@ -60,6 +66,7 @@ namespace TeacherOrganizer.Forms
             {
                 x.Click += MonthButtonClick;
             }));
+
         }
         private void MonthButtonClick(object sender, EventArgs e)
         {
@@ -177,6 +184,12 @@ namespace TeacherOrganizer.Forms
         private void отчетToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new Report().ShowDialog();
+        }
+
+        private void Main_Paint(object sender, PaintEventArgs e)
+        {
+            Main.loader.Visible = false;
+                
         }
     }
 }

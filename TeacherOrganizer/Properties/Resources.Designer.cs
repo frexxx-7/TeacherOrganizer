@@ -73,6 +73,26 @@ namespace TeacherOrganizer.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Spinner_1s_200px {
+            get {
+                object obj = ResourceManager.GetObject("Spinner-1s-200px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Spinner_1s_200px__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Spinner-1s-200px (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap timesheet_40px {
             get {
                 object obj = ResourceManager.GetObject("timesheet_40px", resourceCulture);

@@ -113,6 +113,7 @@
             this.CanceledButton.Size = new System.Drawing.Size(132, 38);
             this.CanceledButton.TabIndex = 44;
             this.CanceledButton.Text = "Отмена";
+            this.CanceledButton.Click += new System.EventHandler(this.CanceledButton_Click);
             // 
             // AddButton
             // 

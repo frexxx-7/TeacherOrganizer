@@ -31,16 +31,16 @@ namespace TeacherOrganizer.UserControls
             }
 
         }
-        public void FillView(List<Task> appointments)
+        public void FillView(List<Task> tasks)
         {
             guna2Panel1.Controls.Clear();
-            foreach (var item in appointments)
+            foreach (var item in tasks)
             {
                 var task = new TaskView(item);
                 task.Dock = DockStyle.Top;
                 guna2Panel1.Controls.Add(task);
             }
-            MyDateTimePicker.Value = appointments[0].endDate;
+            MyDateTimePicker.Value = tasks[0].endDate;
         }
 
     }

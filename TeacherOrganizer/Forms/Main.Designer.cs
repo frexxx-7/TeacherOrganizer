@@ -49,7 +49,6 @@
             this.отчетToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.codeeloGradientPanel3 = new CodeeloUI.Controls.CodeeloGradientPanel();
-            this.taskViewPanel1 = new TeacherOrganizer.UserControls.TaskViewPanel();
             this.MonthNavigationPanel = new System.Windows.Forms.Panel();
             this.DecemberButton = new System.Windows.Forms.Button();
             this.NovemberButton = new System.Windows.Forms.Button();
@@ -68,11 +67,15 @@
             this.PreviousYearButton = new System.Windows.Forms.Button();
             this.NextYearButton = new System.Windows.Forms.Button();
             this.codeeloGradientPanel2 = new CodeeloUI.Controls.CodeeloGradientPanel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.taskViewPanel1 = new TeacherOrganizer.UserControls.TaskViewPanel();
             this.guna2Panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.codeeloGradientPanel3.SuspendLayout();
             this.MonthNavigationPanel.SuspendLayout();
             this.YearNavigationPanel.SuspendLayout();
+            this.codeeloGradientPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -135,28 +138,28 @@
             this.настройкиToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 38);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(734, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(586, 30);
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // задачиToolStripMenuItem
             // 
             this.задачиToolStripMenuItem.Name = "задачиToolStripMenuItem";
-            this.задачиToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
+            this.задачиToolStripMenuItem.Size = new System.Drawing.Size(72, 26);
             this.задачиToolStripMenuItem.Text = "Задачи";
             this.задачиToolStripMenuItem.Click += new System.EventHandler(this.задачиToolStripMenuItem_Click);
             // 
             // нагрузкаToolStripMenuItem
             // 
             this.нагрузкаToolStripMenuItem.Name = "нагрузкаToolStripMenuItem";
-            this.нагрузкаToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
+            this.нагрузкаToolStripMenuItem.Size = new System.Drawing.Size(86, 26);
             this.нагрузкаToolStripMenuItem.Text = "Нагрузка";
             this.нагрузкаToolStripMenuItem.Click += new System.EventHandler(this.нагрузкаToolStripMenuItem_Click);
             // 
             // группыToolStripMenuItem
             // 
             this.группыToolStripMenuItem.Name = "группыToolStripMenuItem";
-            this.группыToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
+            this.группыToolStripMenuItem.Size = new System.Drawing.Size(75, 26);
             this.группыToolStripMenuItem.Text = "Группы";
             this.группыToolStripMenuItem.Click += new System.EventHandler(this.группыToolStripMenuItem_Click);
             // 
@@ -166,7 +169,7 @@
             this.мероприятияToolStripMenuItem,
             this.планированиеToolStripMenuItem1});
             this.планированиеToolStripMenuItem.Name = "планированиеToolStripMenuItem";
-            this.планированиеToolStripMenuItem.Size = new System.Drawing.Size(128, 24);
+            this.планированиеToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
             this.планированиеToolStripMenuItem.Text = "Планирование";
             // 
             // мероприятияToolStripMenuItem
@@ -190,7 +193,7 @@
             this.специальностьToolStripMenuItem,
             this.образованиеToolStripMenuItem});
             this.справочникиToolStripMenuItem.Name = "справочникиToolStripMenuItem";
-            this.справочникиToolStripMenuItem.Size = new System.Drawing.Size(117, 24);
+            this.справочникиToolStripMenuItem.Size = new System.Drawing.Size(117, 26);
             this.справочникиToolStripMenuItem.Text = "Справочники";
             // 
             // академическийПредметToolStripMenuItem
@@ -220,20 +223,20 @@
             this.профильToolStripMenuItem,
             this.отчетToolStripMenuItem});
             this.настройкиToolStripMenuItem.Name = "настройкиToolStripMenuItem";
-            this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(98, 24);
+            this.настройкиToolStripMenuItem.Size = new System.Drawing.Size(98, 26);
             this.настройкиToolStripMenuItem.Text = "Настройки";
             // 
             // профильToolStripMenuItem
             // 
             this.профильToolStripMenuItem.Name = "профильToolStripMenuItem";
-            this.профильToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.профильToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
             this.профильToolStripMenuItem.Text = "Профиль";
             this.профильToolStripMenuItem.Click += new System.EventHandler(this.профильToolStripMenuItem_Click);
             // 
             // отчетToolStripMenuItem
             // 
             this.отчетToolStripMenuItem.Name = "отчетToolStripMenuItem";
-            this.отчетToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.отчетToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
             this.отчетToolStripMenuItem.Text = "Отчет";
             this.отчетToolStripMenuItem.Click += new System.EventHandler(this.отчетToolStripMenuItem_Click);
             // 
@@ -260,14 +263,6 @@
             this.codeeloGradientPanel3.Name = "codeeloGradientPanel3";
             this.codeeloGradientPanel3.Size = new System.Drawing.Size(385, 597);
             this.codeeloGradientPanel3.TabIndex = 25;
-            // 
-            // taskViewPanel1
-            // 
-            this.taskViewPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.taskViewPanel1.Location = new System.Drawing.Point(0, 72);
-            this.taskViewPanel1.Name = "taskViewPanel1";
-            this.taskViewPanel1.Size = new System.Drawing.Size(187, 525);
-            this.taskViewPanel1.TabIndex = 2;
             // 
             // MonthNavigationPanel
             // 
@@ -538,12 +533,37 @@
             this.codeeloGradientPanel2.CausesValidation = false;
             this.codeeloGradientPanel2.ColorFillFirst = System.Drawing.Color.White;
             this.codeeloGradientPanel2.ColorFillSecond = System.Drawing.Color.Blue;
+            this.codeeloGradientPanel2.Controls.Add(this.guna2PictureBox1);
             this.codeeloGradientPanel2.DrawGradient = true;
             this.codeeloGradientPanel2.GradientDirection = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.codeeloGradientPanel2.Location = new System.Drawing.Point(0, 69);
             this.codeeloGradientPanel2.Name = "codeeloGradientPanel2";
             this.codeeloGradientPanel2.Size = new System.Drawing.Size(573, 566);
             this.codeeloGradientPanel2.TabIndex = 26;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = global::TeacherOrganizer.Properties.Resources.Spinner_1s_200px__1_;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(567, 560);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.guna2PictureBox1.TabIndex = 0;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // taskViewPanel1
+            // 
+            this.taskViewPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.taskViewPanel1.Location = new System.Drawing.Point(0, 72);
+            this.taskViewPanel1.Name = "taskViewPanel1";
+            this.taskViewPanel1.Size = new System.Drawing.Size(187, 525);
+            this.taskViewPanel1.TabIndex = 2;
             // 
             // Main
             // 
@@ -561,12 +581,15 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
             this.Load += new System.EventHandler(this.Main_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.Main_Paint);
             this.guna2Panel1.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.codeeloGradientPanel3.ResumeLayout(false);
             this.MonthNavigationPanel.ResumeLayout(false);
             this.YearNavigationPanel.ResumeLayout(false);
+            this.codeeloGradientPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -613,5 +636,6 @@
         private System.Windows.Forms.ToolStripMenuItem настройкиToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem профильToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem отчетToolStripMenuItem;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }
